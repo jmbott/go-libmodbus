@@ -9,12 +9,16 @@ import (
 #include <stdio.h>
 #include <stdlib.h>
 
+static void test() {
+        printf("Hello World in C\n");
+}
+
 */
 import "C"
 
 func main() {
         hey_go.Hey()
         fmt.Println("I am here in go")
-	//C.printf("Hello, World in C\n");
+        C.test()
 }
 
