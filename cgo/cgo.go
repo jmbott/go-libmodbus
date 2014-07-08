@@ -3,22 +3,11 @@ package main
 import (
         "fmt"
         "go-libmodbus/hey_go"
+        "go-libmodbus/modbus"
 )
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-static void test() {
-        printf("Hello World in C\n");
-}
-
-*/
-import "C"
 
 func main() {
         hey_go.Hey()
         fmt.Println("I am here in go")
-        C.test()
+	modbus.Read_holding_registers_tcp()
 }
-
